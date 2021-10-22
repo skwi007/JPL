@@ -1,0 +1,25 @@
+export interface IJeu {
+    Nom:string;
+    Fichier:string;
+    FichierNom:string;
+    ImageFichierUrl:string;
+    Terrain:string;
+    TerrainNom:string;
+    ImageTerrainUrl:string;
+    Duree:number;
+    ImageDureeUrl:string;
+    EffectifMinimum:number;
+    EffectifOptimal:number;
+    EffectifMaximum:number;
+    Effectif:string;
+    ImageEffectifUrl:string;
+    AgeMinimum:number;
+    AgeMaximum:number;
+    Age:string;
+    ImageAgeUrl:string;
+    Materiel:string;
+    ImageMaterielUrl:string;
+    Structure:string;
+    StructureNom:string;
+    ImageStructureUrl:string;
+}

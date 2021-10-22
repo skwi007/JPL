@@ -1,0 +1,14 @@
+[
+    {
+    "Duree":30,
+    "ImageDureeUrl":"assets/images/duree/30.jpg"
+    },
+    {
+    "Duree":45,
+    "ImageDureeUrl":"assets/images/duree/45.jpg"
+    },
+    {
+    "Duree":60,
+    "ImageDureeUrl":"assets/images/duree/1h+.png"
+    }
+]

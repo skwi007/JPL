@@ -1,0 +1,66 @@
+import { Injectable } from '@angular/core';
+import { IMateriel } from './materiel';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class MaterielService {
+    
+    getMateriels(): IMateriel[] {
+      return [
+        {
+          "Code": "Baguette",
+          "Nom": "Baguette",
+          "ImageMaterielUrl":"assets/images/materiel/baguette.png"
+        },
+        {
+          "Code": "Ballon",
+          "Nom":"Ballon",
+        "ImageMaterielUrl":"assets/images/materiel/ballon.png"
+        },
+        {
+            "Code":"Rien",
+            "Nom":"Rien",
+        "ImageMaterielUrl":"assets/images/materiel/rien.png"
+        }
+        ,
+        {
+            "Code":"Balle",
+            "Nom":"Balle",
+            "ImageMaterielUrl":"assets/images/materiel/balle.png"
+        }
+        ,
+        {
+            "Code":"Enveloppes, papier, crayons",
+            "Nom":"Enveloppes, papier, crayons",
+            "ImageMaterielUrl":"assets/images/materiel/enveloppes.png"
+        }
+        ,
+        {
+            "Code":"Bancs, tabouret",
+            "Nom":"Bancs, tabouret",
+            "ImageMaterielUrl":"assets/images/materiel/banc.png"
+        }
+        ,
+        {
+            "Code":"Foulards",
+            "Nom":"Foulards",
+            "ImageMaterielUrl":"assets/images/materiel/foulards.jpg"
+        }
+        ,
+        {
+            "Code":"La tableau des couleurs, les 18 cartons colorés, les fiches-réponses, le tableau de vérification, un crayon et un sifflet",
+            "Nom":"La tableau des couleurs, les 18 cartons colorés, les fiches-réponses, le tableau de vérification, un crayon et un sifflet",
+            "ImageMaterielUrl":"assets/images/materiel/tableauDesCouleurs.png"
+        }
+        ,
+        {
+            "Code":"Bristol, pinces à linge",
+            "Nom":"Bristol, pinces à linge",
+            "ImageMaterielUrl":"assets/images/materiel/bristol.png"
+        }
+    ]
+    
+    
+    }
+}

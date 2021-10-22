@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  .tdCenter {
+    text-align: center;
+    width: 25px;
+    margin: 0px;
+  }
+
+  .tdNom {
+    width: 25px;
+    font-size: 20px;
+    padding-left: 30px;
+  }
+
+  .images {
+    width: 100px;
+    margin: 2px;
+  }
+
+  .imagesOutline {
+    width: 25px;
+    margin: 2px;
+  }
+  

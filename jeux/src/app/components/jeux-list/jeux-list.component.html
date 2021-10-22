@@ -1,0 +1,134 @@
+<div class='card'>
+    <div>
+      <h1>{{pageTitle}}</h1>
+    </div>
+    <div class='card-body'>
+      <div class="table-responsive-sm">
+        <table class="table" width="100%"
+               *ngIf='jeux.length'>
+          <thead>
+            <tr>
+              <th>
+                <mat-form-field appearance="outline">
+                  <mat-label>Nom</mat-label>
+                  <input #modValue placeholder="Filtrer par nom" type="text" [formControl]="nomsFormControl" matInput>
+                </mat-form-field>
+              </th> 
+              <th>
+                <mat-form-field appearance="outline">
+                  <mat-label>Fichier</mat-label>
+                  <mat-select [formControl]="fichiersFormControl" multiple>
+                    <mat-option *ngFor="let fichier of fichierList" [value]="fichier"><img [src]='fichier.ImageFichierUrl'
+                      [title]='fichier.Nom'
+                      class='imagesOutline'>  {{fichier.Nom}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </th>
+              <th>
+                <mat-form-field appearance="outline">
+                  <mat-label>Âge</mat-label>
+                  <mat-select [formControl]="agesFormControl" multiple>
+                    <mat-option *ngFor="let age of ageList" [value]="age"><img [src]='age.ImageAgeUrl'
+                      [title]='age.Nom'
+                      class='imagesOutline'
+                      >  {{age.Nom}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </th>
+              <th>
+                <mat-form-field appearance="outline">
+                  <mat-label>Terrain</mat-label>
+                  <mat-select [formControl]="terrainsFormControl" multiple>
+                    <mat-option *ngFor="let terrain of terrainList" [value]="terrain"><img [src]='terrain.ImageTerrainUrl'
+                      [title]='terrain.Nom'
+                      class='imagesOutline'
+                      >  {{terrain.Nom}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </th>
+              <th><mat-form-field appearance="outline">
+                <mat-label>Durée</mat-label>
+                <mat-select [formControl]="dureesFormControl" multiple>
+                  <mat-option *ngFor="let duree of dureeList" [value]="duree"><img [src]='duree.ImageDureeUrl'
+                    [title]='duree.Duree'
+                    class='imagesOutline'>  {{duree.Duree}}</mat-option>
+                </mat-select>
+              </mat-form-field></th>
+              <th>
+                <mat-form-field appearance="outline">
+                  <mat-label>Effectif</mat-label>
+                  <input #modValue type="number" [formControl]="effectifFormControl" matInput>
+                </mat-form-field>
+              </th>
+              <th>
+                <mat-form-field appearance="outline">
+                  <mat-label>Matériel</mat-label>
+                  <mat-select [formControl]="materielsFormControl" multiple>
+                    <mat-option *ngFor="let materiel of materielList" [value]="materiel"><img [src]='materiel.ImageMaterielUrl'
+                      [title]='materiel.Nom'
+                      class='imagesOutline'>  {{materiel.Nom}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </th>
+              <th>
+                <mat-form-field appearance="outline">
+                  <mat-label>Structure</mat-label>
+                  <mat-select [formControl]="structuresFormControl" multiple>
+                    <mat-option *ngFor="let structure of structureList" [value]="structure"><img [src]='structure.ImageStructureUrl'
+                      [title]='structure.Nom'
+                      class='imagesOutline'>  {{structure.Nom}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let jeu of getJeuxAAfficher()'>
+              <td class="tdNom">
+                <!-- <a [routerLink]="['/jeux', jeu.jeuId]"> -->
+                  {{ jeu.Nom }}
+                <!-- </a> -->
+              </td>
+
+              <td class="tdCenter"><img [src]='jeu.ImageFichierUrl'
+                [title]='jeu.FichierNom'
+                class='images'></td>
+
+                <td class="tdCenter"><img [src]='jeu.ImageAgeUrl'
+                  [title]='jeu.Age'
+                  class='images'></td>
+
+              <td class="tdCenter"><img [src]='jeu.ImageTerrainUrl'
+                [title]='jeu.TerrainNom'
+                class='images'></td>
+
+                <td  class="tdCenter"><img [src]='jeu.ImageDureeUrl'
+                     [title]='jeu.Duree'
+                     class='images'>
+                </td>
+
+              <td *ngIf='jeu.ImageEffectifUrl !== ""'  class="tdCenter">
+                <img  
+                    [src]='jeu.ImageEffectifUrl'
+                     [title]='jeu.Effectif'
+                     class='images'>
+              </td>
+              <td *ngIf='jeu.ImageEffectifUrl == ""'  class="tdCenter">
+                {{ jeu.Effectif }}
+              </td>
+
+              <td  class="tdCenter"><img [src]='jeu.ImageMaterielUrl'
+                [title]='jeu.Materiel'
+                class='images'>
+           </td>
+
+           <td  class="tdCenter"><img [src]='jeu.ImageStructureUrl'
+            [title]='jeu.StructureNom'
+            class='images'>
+          </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
